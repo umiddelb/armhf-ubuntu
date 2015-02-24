@@ -2,7 +2,7 @@ FROM armv7/armhf-ubuntu_core
 
 # a few minor docker-specific tweaks
 # see https://github.com/tianon/docker-brew-ubuntu-core/blob/a9da4b3cd8977c2aacafe5d9d0056cbb360f2d1c/trusty/Dockerfile
-ENV DEBIAN_FRONTEND noninteractive
+# ENV DEBIAN_FRONTEND noninteractive commented put due to http://docs.docker.com/faq/#why-is-debian_frontendnoninteractive-discouraged-in-dockerfiles
 
 RUN echo '#!/bin/sh' > /usr/sbin/policy-rc.d \
 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d \
